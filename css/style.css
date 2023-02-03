@@ -41,6 +41,7 @@ header nav div{
 .titulo-zona{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .zona{
@@ -101,10 +102,14 @@ header nav div{
 }
 
 .introduccion{
-    background-color: red;
-    border: red;
+    /* background-color: red;
+    border: red; */
     grid-area: intro;
     text-align: center;
+}
+
+.introduccion p{
+    margin: 10px;
 }
 
 .proyectos{
@@ -112,8 +117,8 @@ header nav div{
     flex-wrap: wrap;
     justify-content:space-around;
     padding:  30px;
-    background-color: blue;
-    border: blue;
+    /* background-color: blue;
+    border: blue; */
     grid-area: main;
 }
 
@@ -125,8 +130,14 @@ header nav div{
     width: 250px;
     height: auto;   
     margin: 5px;
-    border: 1px solid green;
+    transition: 1.5s;
+    /* border: 1px solid green; */
 }
+
+.proyectos div:hover{
+    transform: scale(1.1);
+}
+
 .proyectos div img{
     width: auto;
     height: 250px;    
@@ -141,13 +152,20 @@ header nav div{
     padding: 3px 10px;
 }
 .anuncio{
-    background-color: yellow;
+    background-color: #8f746e;
     grid-area: aside;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    margin: 5px;
 }
 
-.anuncio li{
-    list-style: remove;
+.anuncio a{
+    width: 150px;
+    margin: 3px;
+    color: white;
+    border: solid 1px white;
 }
 
 
@@ -161,4 +179,18 @@ footer{
 footer div img {
     width: 50px;
     height: 50px;
+}
+
+/* -----------------------MEDIA QUERY--------------------- */
+
+@media screen and (max-width:480px){
+    .grid-galeria{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "intro intro intro intro"
+        "aside aside aside aside"
+        "main main main main"
+        ;
+    }
 }
