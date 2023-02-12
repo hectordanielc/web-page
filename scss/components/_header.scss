@@ -1,0 +1,20 @@
+
+/*------- Header-------*/
+
+header{
+    background-color: #8f746e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar {
+        width: 100%;
+        font-weight: 500;
+        div{
+            display: flex;
+            justify-content: end;
+            .titulo-qualitem{
+                font-size: 30px;
+            }
+        }
+    }
+}

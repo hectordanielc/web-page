@@ -1,0 +1,11 @@
+@media screen and (max-width:480px){
+    .grid-galeria{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "intro intro intro intro"
+        "aside aside aside aside"
+        "main main main main"
+        ;
+    }
+}
