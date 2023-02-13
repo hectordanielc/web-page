@@ -3,12 +3,31 @@
   padding: 0;
   box-sizing: border-box; }
 
+/*Variables*/
+/*Listas*/
+/*Titulo o Logo Qualitem*/
+/*Extend*/
+.hero div, .contenedores .titulo-zona {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.hero, .contenedores, .grid-galeria .anuncio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/*Mixins*/
 /*------- Header-------*/
 header {
   background-color: #8f746e;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: none;
+  flex-direction: row;
+  flex-wrap: wrap; }
   header .navbar {
     width: 100%;
     font-weight: 500; }
@@ -18,47 +37,72 @@ header {
       header .navbar div .titulo-qualitem {
         font-size: 30px; }
 
+/*----------Main----------*/
 .hero {
-  text-align: center;
   width: 100%;
-  height: 50vh;
+  height: 90vh;
   background-image: url("../img/hola.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-
-.containers .titulo-zona {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.containers .zona {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  transition-property: width; }
-  .containers .zona div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid gray;
-    width: 250px;
-    height: auto;
-    margin: 30px;
+  .hero h1 {
+    margin: 3px;
+    font-size: 60px;
+    background-color: #8f746e;
+    color: white;
+    border-radius: 5px; }
+  .hero p {
+    font-size: 35px;
     text-align: center;
-    /* transition: width 5s ease in 2s; */
-    transition: 1.5s; }
-    .containers .zona div:hover {
-      transform: scale(1.1); }
-    .containers .zona div img {
-      width: auto;
-      height: 250px; }
-    .containers .zona div a {
+    margin: 10px;
+    font-weight: 8px; }
+  .hero div a {
+    margin: 3px;
+    background-color: #8f746e;
+    border: none; }
+    .hero div a:hover {
+      background-color: gray; }
+
+.contenedores {
+  margin: 30px; }
+  .contenedores .titulo-zona {
+    font-size: 20px;
+    background-color: #8f746e;
+    width: 33%; }
+    .contenedores .titulo-zona a {
       text-decoration: none;
       color: white;
-      background-color: #8f746e;
-      font-weight: bold;
-      padding: 3px 10px; }
+      width: 100%;
+      text-align: center; }
+  .contenedores .zona {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition-property: width;
+    width: 100%; }
+    .contenedores .zona div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 250px;
+      height: auto;
+      margin: 30px;
+      text-align: center;
+      /* transition: width 5s ease in 2s; */
+      transition: 1.5s; }
+      .contenedores .zona div:hover {
+        transform: scale(1.1); }
+      .contenedores .zona div img {
+        width: auto;
+        height: 250px; }
+      .contenedores .zona div a {
+        text-decoration: none;
+        color: white;
+        background-color: #8f746e;
+        font-weight: bold;
+        padding: 3px 10px; }
 
 .grid-galeria {
   display: grid;
@@ -76,6 +120,8 @@ header {
         border: red; */
     grid-area: intro;
     text-align: center; }
+    .grid-galeria .introduccion h1 {
+      font-size: 40px; }
     .grid-galeria .introduccion p {
       margin: 10px; }
   .grid-galeria .proyectos {
@@ -110,9 +156,6 @@ header {
   .grid-galeria .anuncio {
     background-color: #8f746e;
     grid-area: aside;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
     margin: 5px; }
     .grid-galeria .anuncio a {
@@ -121,12 +164,36 @@ header {
       color: white;
       border: solid 1px white; }
 
+/*---------Footer----------*/
 footer {
   text-align: center;
   background-color: #8f746e; }
   footer div img {
     width: 50px;
     height: 50px; }
+
+/*----------Media Query----------*/
+@media screen and (max-width: 690px) {
+  .hero h1 {
+    font-size: 42px; }
+  .hero p {
+    font-size: 34.5px; } }
+
+@media screen and (max-width: 490px) {
+  .hero h1 {
+    font-size: 29.4px; }
+  .hero p {
+    font-size: 24.15px; }
+  .contenedores {
+    margin: 30px; }
+    .contenedores .titulo-zona {
+      width: 100%; } }
+
+@media screen and (max-width: 334px) {
+  .hero h1 {
+    font-size: 20.58px; }
+  .hero p {
+    font-size: 16.9px; } }
 
 @media screen and (max-width: 480px) {
   .grid-galeria {

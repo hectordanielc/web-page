@@ -1,3 +1,45 @@
+/*----------Media Query----------*/
+
+@media screen and (max-width:690px){
+    .hero{
+        h1{
+            font-size: 42px;
+        }
+        p{
+            font-size: 34.5px;
+        }
+    }
+}
+
+@media screen and (max-width:490px){
+    .hero{
+        h1{
+            font-size: 29.4px;
+        }
+        p{
+            font-size: 24.15px;
+        }
+    }
+    .contenedores{
+        margin: 30px;
+    
+        .titulo-zona{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:334px){
+    .hero{
+        h1{
+            font-size: 20.58px;
+        }
+        p{
+            font-size: 16.9px;
+        }
+    }
+}
+
 @media screen and (max-width:480px){
     .grid-galeria{
         grid-template-columns: repeat(4,1fr);

@@ -1,30 +1,67 @@
+/*----------Main----------*/
+
 .hero{
-    text-align: center;
+    @extend %vertical-flex;
     width: 100%;
-    height: 50vh;
+    height: 90vh;
+    // background-color: $color-principal;
+    // border: solid 1px $color-secundario;
+    // margin: 5px;
     background-image: url("../img/hola.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    h1{
+        margin: 3px;
+        font-size: 60px;
+        background-color: $color-principal;
+        color: $color-secundario;
+        border-radius: 5px;
+    }
+    p{
+        font-size: 35px;
+        text-align: center;
+        margin: 10px;
+        font-weight: 8px;
+    }
+    div{
+        @extend %horizontal-flex;
+        a{
+            margin: 3px;
+            background-color: $color-principal;
+            border: none;
+            &:hover{
+                background-color: gray;
+            }
+        }
+    }
 }
 
-.containers{
+.contenedores{
+    @extend %vertical-flex;
+    margin: 30px;
+
     .titulo-zona{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        @extend %horizontal-flex;
+        font-size: nth($font-size,1);
+        background-color: $color-principal;
+        width: 33%;
+        a{
+            text-decoration: none;
+            color: $color-secundario;
+            width: 100%;
+            text-align: center;
+        }
     }
     .zona{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        @include flex (flex,space-around,center,row);
         transition-property: width;
+        width: 100%;
         div{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            border: 1px solid gray;
+            // border: 1px solid gray;
             width: 250px;
             height: auto;
             margin: 30px;
@@ -40,8 +77,8 @@
             }
             a{
                 text-decoration: none;
-                color: white;
-                background-color: #8f746e;
+                color: $color-secundario;
+                background-color: $color-principal;
                 font-weight: bold;
                 padding: 3px 10px;
             }
@@ -69,6 +106,9 @@
         border: red; */
         grid-area: intro;
         text-align: center;
+        h1{
+            font-size: nth($font-size,2)
+        }
         p{
             margin: 10px;
         }
@@ -100,26 +140,24 @@
             }
             a{
                 text-decoration: none;
-                color: white;
-                background-color: #8f746e;
+                color: $color-secundario;
+                background-color: $color-principal;
                 font-weight: bold;
                 padding: 3px 10px;
             }
         }
     }
     .anuncio{
-        background-color: #8f746e;
+        background-color: $color-principal;
         grid-area: aside;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @extend %vertical-flex;
         text-align: center;
         margin: 5px;
         a{
             width: 150px;
             margin: 3px;
-            color: white;
-            border: solid 1px white;
+            color: $color-secundario;
+            border: solid 1px $color-secundario;
         }
     }
 }

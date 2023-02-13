@@ -1,1 +1,33 @@
+/*Variables*/
 $color-principal: #8f746e;
+$color-secundario: white;
+
+/*Listas*/
+$font-size:
+20px,/*Titulo de Zonas*/
+40px,/*Titulo en Pagina de cada zona*/
+30px; /*Titulo o Logo Qualitem*/
+
+/*Extend*/
+%horizontal-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+%vertical-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Mixins*/
+@mixin flex ($flex, $justify, $align, $direction){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
