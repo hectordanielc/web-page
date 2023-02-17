@@ -13,7 +13,7 @@
   align-items: center;
   flex-wrap: wrap; }
 
-.hero, .contenedores, .grid-galeria .anuncio {
+.hero, .contenedores, .grid-galeria .anuncio, .equipo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,6 +36,8 @@ header {
       justify-content: end; }
       header .navbar div .titulo-qualitem {
         font-size: 30px; }
+      header .navbar div div div a {
+        font-size: 20px; }
 
 /*----------Main----------*/
 .hero {
@@ -55,7 +57,7 @@ header {
     font-size: 35px;
     text-align: center;
     margin: 10px;
-    font-weight: 8px; }
+    font-weight: 500; }
   .hero div a {
     margin: 3px;
     background-color: #8f746e;
@@ -163,6 +165,26 @@ header {
       margin: 3px;
       color: white;
       border: solid 1px white; }
+
+.equipo .perfiles {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .equipo .perfiles div {
+    margin: 5px; }
+    .equipo .perfiles div a {
+      text-align: center;
+      text-decoration: none; }
+      .equipo .perfiles div a img {
+        height: 400px;
+        width: 300px; }
+      .equipo .perfiles div a p {
+        background-color: #8f746e;
+        color: white;
+        font-weight: 500; }
 
 /*---------Footer----------*/
 footer {

@@ -14,6 +14,13 @@ header{
             .titulo-qualitem{
                 font-size: nth($font-size,3)
             }
+            div{
+                div{
+                    a{
+                        font-size: nth($font-size,1);
+                    }
+                }
+            }
         }
     }
 }

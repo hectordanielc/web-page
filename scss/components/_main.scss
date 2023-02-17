@@ -22,7 +22,7 @@
         font-size: 35px;
         text-align: center;
         margin: 10px;
-        font-weight: 8px;
+        font-weight: 500;
     }
     div{
         @extend %horizontal-flex;
@@ -158,6 +158,30 @@
             margin: 3px;
             color: $color-secundario;
             border: solid 1px $color-secundario;
+        }
+    }
+}
+
+.equipo{
+    @extend %vertical-flex;
+    .perfiles{
+        width: 100%;
+        @include flex (flex,space-around,center,row);
+        div{
+            margin: 5px;
+            a{
+                text-align: center;
+                text-decoration: none;
+                img{
+                    height: 400px;
+                    width: 300px;
+                }
+                p{
+                    background-color: $color-principal;
+                    color: $color-secundario;
+                    font-weight: 500;
+                }
+            }
         }
     }
 }
